@@ -1,36 +1,52 @@
-import { Carousel } from "@material-tailwind/react";
-import FeedbackCard from "/src/components/searchcards/FeedbackCard";
-const Feedback = () => {
+import { TECarousel, TECarouselItem } from "tw-elements-react";
+
+export default function Feedback() {
   return (
-    <div>
-      <div className="bg-white p-10 m-20 rounded-[30px] shadow-3xl gap-2 ">
-        <h1 className="text-4xl font-semibold flex justify-center text-secondary">
-          Cảm nhận của khách hàng
-        </h1>
-
-        <Carousel
-          className="rounded-xl gap-5"
-          navigation={({ setActiveIndex, activeIndex, length }) => (
-            <div className="absolute bottom-[10px] left-2/4 flex -translate-x-2/4 gap-2">
-              {new Array(length).fill("").map((_, i) => (
-                <span
-                  key={i}
-                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                    activeIndex === i ? "w-8 bg-primary" : "w-4 bg-secondary/50"
-                  }`}
-                  onClick={() => setActiveIndex(i)}
-                />
-              ))}
-            </div>
-          )}
+    <TECarousel showControls showIndicators ride="carousel">
+      <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+        <TECarouselItem
+          itemID={1}
+          className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         >
-          <FeedbackCard />
-          <FeedbackCard />
-          <FeedbackCard />
-        </Carousel>
+          <img
+            src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
+            className="block w-full"
+            alt="..."
+          />
+          <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+            <h5 className="text-xl">First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </TECarouselItem>
+        <TECarouselItem
+          itemID={2}
+          className="relative float-left hidden -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        >
+          <img
+            src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg"
+            className="block w-full"
+            alt="..."
+          />
+          <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+            <h5 className="text-xl">Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </TECarouselItem>
+        <TECarouselItem
+          itemID={3}
+          className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        >
+          <img
+            src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
+            className="block w-full"
+            alt="..."
+          />
+          <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+            <h5 className="text-xl">Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </TECarouselItem>
       </div>
-    </div>
+    </TECarousel>
   );
-};
-
-export default Feedback;
+}

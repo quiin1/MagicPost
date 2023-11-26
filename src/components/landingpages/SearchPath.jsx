@@ -6,7 +6,8 @@ import FindAdd from "../searchcards/FindAdd";
 import { FaSearchLocation } from "react-icons/fa";
 import { GrMoney } from "react-icons/gr";
 import { HiOutlineViewfinderCircle } from "react-icons/hi2";
-
+import {motion} from 'framer-motion'
+import { fadeIn } from '../effect/variants'
 
 const SearchPath = () => {
   const data = [
@@ -37,16 +38,16 @@ const SearchPath = () => {
   };
 
   return (
-    <div className="block">
-      <div className="pt-5 flex justify-center items-center">
+    <div id='search' className="block">
+      <motion.div variants={fadeIn("down", 0.2)} initial="hidden" whileInView={"show"} viewport={{once:false, amount:0.7}} className="pt-5 flex justify-center items-center">
         <button className="m-5 py-3 px-8 border-primary border font-semibold text-primary rounded hover:bg-primary hover:text-white transition-all duration-300">
           Tra cứu
         </button>
         <button className="m-5 py-3 px-8 border-primary border font-semibold text-primary rounded hover:bg-primary hover:text-white transition-all duration-300">
           Dịch vụ
         </button>
-      </div>
-      <div className=" mx-[17%] mt-5 shadow-xl rounded-xl">
+      </motion.div>
+      <motion.div variants={fadeIn("up", 0.2)} initial="hidden" whileInView={"show"} viewport={{once:false, amount:0.7}} className=" mx-[17%] mt-5 shadow-xl rounded-xl">
         <Tabs value={activeTab}>
           <TabsHeader>
             {data.map(({ label, value, icon }) => (
@@ -71,7 +72,7 @@ const SearchPath = () => {
             ))}
           </TabsBody>
         </Tabs>
-      </div>
+      </motion.div>
     </div>
   );
 };

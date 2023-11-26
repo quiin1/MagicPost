@@ -1,28 +1,21 @@
-import IndexNavbars from './components/navbars/IndexNavbars'
-// import LandingPage from './layouts/LandingPage'
+import LandingPage from './views/LandingPage'
 import '/src/assets/styles/App.css'
-import Home from './components/landingpages/Home'
-import SearchPath from './components/landingpages/SearchPath'
-import Features from './components/landingpages/Features'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import LoginPage from './views/LoginPage'
+import SignUp from './views/SignUpPage'
 import Feedback from './components/landingpages/Feedback'
-import { FooterWithSocialLinks } from './components/footer/Footers'
+
 function App() {
   return (
-    <>
-    {/* <div className='relative mt-24'>
-      <LandingPage/>
-    </div>  */}
-
-    <div>
-      <IndexNavbars/>
-      <Home/>
-      <SearchPath/>
-      <Features/>
-      <Feedback/>
-      <FooterWithSocialLinks/>
-    </div>
-     
-    </>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<LandingPage/>} />
+      <Route path='login' element={<LoginPage/>} />
+      <Route path='signup' element={<SignUp/>} />
+      <Route path='feedback' element={<Feedback/>} />
+    </Routes>
+      
+    </BrowserRouter>
   )
 }
 

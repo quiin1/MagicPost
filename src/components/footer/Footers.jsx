@@ -2,16 +2,16 @@ import { Typography } from "@material-tailwind/react";
  
 const LINKS = [
   {
-    title: "Product",
-    items: ["Overview", "Features", "Solutions", "Tutorials"],
+    title: "Dịch vụ",
+    items: ["Vận chuyển trong nước", "Vận chuyển nước ngoài", "Vận chuyển hỏa tốc"],
   },
   {
-    title: "Company",
-    items: ["About us", "Careers", "Press", "News"],
+    title: "Công ty",
+    items: ["Về chúng tôi", "Tuyển dụng", "Tin tức"],
   },
   {
-    title: "Resource",
-    items: ["Blog", "Newsletter", "Events", "Help center"],
+    title: "Nguồn",
+    items: ["Blog", "Sự kiện", "Trung tâm hỗ trợ"],
   },
 ];
  
