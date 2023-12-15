@@ -1,7 +1,7 @@
-
+import { Button } from 'flowbite-react';
 const FindAdd = () => {
   return (
-    <div>FindAdd</div>
+    <div><Button>Click me</Button></div>
   )
 }
 

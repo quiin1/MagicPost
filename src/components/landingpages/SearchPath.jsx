@@ -49,7 +49,7 @@ const SearchPath = () => {
       </motion.div>
       <motion.div variants={fadeIn("up", 0.2)} initial="hidden" whileInView={"show"} viewport={{once:false, amount:0.7}} className=" mx-[17%] mt-5 shadow-xl rounded-xl">
         <Tabs value={activeTab}>
-          <TabsHeader>
+          <TabsHeader className="shadow-md">
             {data.map(({ label, value, icon }) => (
               <Tab
                 key={value}
