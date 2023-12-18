@@ -8,7 +8,7 @@ const ServicePage = ({navItems}) => {
             <IndexNavbars className="relative z-50"/>
             <div className="relative z-0">
                 <LeftNavBar navItems={navItems}/>
-                <div className='md:ml-[20%] md:mt-[110px]'>
+                <div className='md:ml-[20%] md:mt-[50px]'>
                     asdasd
                 </div>
             </div>
